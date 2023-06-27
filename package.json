@@ -51,8 +51,14 @@
       "node/no-extraneous-import": "error",
       "node/no-missing-import": "error",
       "node/no-unpublished-import": "error",
-      "vue/html-indent": ["error", 2],
-      "indent": ["error", 2],
+      "vue/html-indent": [
+        "error",
+        2
+      ],
+      "indent": [
+        "error",
+        2
+      ],
       "vue/max-attributes-per-line": "off"
     }
   },
