@@ -23,20 +23,23 @@ export default {
 <style lang="scss" module>
 @import "../../css/element.scss";
 .content{
+  /*fixed布局中的width:100%方法*/
+  position: fixed;
   top: 0;
-  position: static;
+  left: 0;
+  right: 0;
   background: #232227;
-  display: flex;
   overflow: hidden;
-  width: 100%;
   height: 100px;
-  z-index: 200;
+  line-height: 100px;
+  /*防止Header被覆盖的方法*/
+  z-index: 100;
   .close{
     float: left;
     box-sizing: border-box;
     width: 32px;
     height: 100px;
-    margin-left: 12px;
+    margin-left: 2.5%;
     align-items: center;
     display: flex;
     img{
@@ -45,22 +48,37 @@ export default {
     }
   }
   .item{
-    float:left;
+    margin-top: 15px;
+    box-sizing: border-box;
+    img{
+      display: flex;
+      align-items: center;
+      float:left;
+      width: 70px;
+      height: 70px;
+      margin-left: 20px;
+      margin-right: 10px;
+    }
     h4{
+      color: white;
       font-size: 24px;
       line-height: 24px;
     }
     p{
+      margin-top: 12px;
+      color: #999;
       font-size: 24px;
       line-height: 24px;
     }
-    img{
-      width: 70px;
-      height: 100px;
-    }
   }
   .btnDownload{
+    box-sizing: border-box;
     float: right;
+    color: #fff;
+    line-height: 100px;
+    border-width: 0;
+    background: #ce2626;
+    margin-top: 0;
   }
 }
 
