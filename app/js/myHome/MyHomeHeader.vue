@@ -1,5 +1,5 @@
 <template>
-  <section :class="$style.content">
+  <div :class="$style.content">
     <div :class="$style.close">
       <img src="//img20.360buyimg.com/jdphoto/s32x32_jfs/t24304/359/2532278428/1657/ed614023/5b850f6fN747fe6a5.png" alt="">
     </div>
@@ -9,7 +9,7 @@
       <p>一站式金融服务平台</p>
     </div>
     <button :class="$style.btnDownload">立即打开</button>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -24,35 +24,35 @@ export default {
 @import "../../css/element.scss";
 .content{
   /*fixed布局中的width:100%方法*/
-  position: fixed;
+  //position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background: #232227;
   overflow: hidden;
-  height: 100px;
-  line-height: 100px;
+  height: 125px;
+  line-height: 125px;
   /*防止Header被覆盖的方法*/
   z-index: 100;
   .close{
     float: left;
     box-sizing: border-box;
-    width: 32px;
-    height: 100px;
-    margin-left: 2.5%;
+    width: 40px;
+    height: 125px;
+    margin-left: 13.5px;
     align-items: center;
     display: flex;
     img{
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
     }
   }
   .item{
     margin-top: 15px;
     box-sizing: border-box;
+    display: block;
     img{
       display: flex;
-      align-items: center;
       float:left;
       width: 70px;
       height: 70px;
@@ -61,24 +61,28 @@ export default {
     }
     h4{
       color: white;
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 30px;
+      line-height: 30px;
     }
     p{
       margin-top: 12px;
       color: #999;
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 30px;
+      line-height: 30px;
     }
   }
   .btnDownload{
     box-sizing: border-box;
     float: right;
     color: #fff;
+    text-align: center;
     line-height: 100px;
+    height: 125px;
+    width: 200px;
     border-width: 0;
     background: #ce2626;
-    margin-top: 0;
+    margin-top: -76px;
+    overflow: hidden;
   }
 }
 

@@ -1,6 +1,7 @@
 <template>
   <section :class="[panelClass,cname]">
     <h4>-{{ title }}-</h4>
+    <h1>{{ head }}</h1>
     <slot/>
   </section>
 </template>
@@ -14,6 +15,10 @@ export default {
       default: "",
     },
     title: {
+      type: String,
+      default: "",
+    },
+    head: {
       type: String,
       default: "",
     },
