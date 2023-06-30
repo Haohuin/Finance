@@ -8,11 +8,13 @@
     <home-product/>
     <home-life/>
     <Footer/>
+    <Navbar/>
   </div>
 </template>
 <script>
 import Header from "../public/Header.vue"
 import Footer from "../public/Footer.vue"
+import Navbar from "../public/Navbar.vue"
 import HomeSlider from "./HomeSlider.vue"
 import HomeNovice from "./HomeNovice.vue"
 import HomeBorrow from "./HomeBorrow.vue"
@@ -20,7 +22,7 @@ import HomeMoney from "./HomeMoney.vue"
 import HomeProduct from "./HomeProduct.vue"
 import HomeLife from "./HomeLife.vue"
 export default {
-  components: { Footer, HomeLife, HomeProduct, HomeMoney, HomeBorrow, HomeNovice, HomeSlider, Header },
+  components: { Navbar, Footer, HomeLife, HomeProduct, HomeMoney, HomeBorrow, HomeNovice, HomeSlider, Header },
 }
 </script>
 
