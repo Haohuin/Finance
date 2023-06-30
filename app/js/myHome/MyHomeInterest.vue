@@ -1,7 +1,14 @@
 <template>
-  <Panel :class="$style.panel" head="精选免息">
-    <section v-for="product in products" :key="product.id"/>
-  </Panel>
+  <div :class="$style.content">
+    <Panel :class="$style.panel" head="精选免息">
+      <section :class="$style.list">
+        <div v-for="product in products" :key="product.id" :class="$style.item">
+          <img :src="product.src" :alt="product.name">
+          <h4>{{ product.name }}</h4>
+        </div>
+      </section>
+    </Panel>
+  </div>
 </template>
 
 <script>
@@ -65,8 +72,43 @@ export default {
 
 <style lang="scss" module>
 @import "../../css/element.scss";
-.panel{
-  @include panel;
+.content {
+  .panel {
+    @include panel(#fff);
+    > h1 {
+      font-size: 50px;
+      margin-left: 40px;
+      font-weight: 700;
+      height: 125px;
+      line-height: 125px;
+    }
+    .list{
+      @include list(row);
+      justify-content: space-around;
+      margin: 25px;
+      .item{
+        padding: 10px;
+        >img{
+          width: 220px;
+          height: 220px;
+        }
+        >h4{
+          box-sizing: border-box;
+          padding-left: 25px;
+          padding-right: 25px;
+          margin-bottom: 25px;
+          font-size: 30px;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          width: 220px;
+        }
+      }
+    }
+  }
 }
 
 </style>

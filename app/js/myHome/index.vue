@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="$style.background">
     <my-home-header/>
     <my-home-slider/>
     <my-home-interest/>
@@ -16,6 +16,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" module>
+.background{
+  background-color: white;
+}
 </style>
